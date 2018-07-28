@@ -1,0 +1,8 @@
+iframe, img {
+	position: absolute; 
+	height: calc(100% - 56px); 
+	width: 100vw; 
+	border: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
