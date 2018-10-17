@@ -243,12 +243,12 @@ export default {
   "Hillshire": {
     "updated_on": null,
     "created_on": "2016-06-18 20:08:50.164109",
-    "url": "02C1R7fHH-A",
-    "type": "youtube",
+    "url": "https://my.mixtape.moe/qvlncs.webm",
+    "type": "other",
     "volume": null,
     "views": 3147,
     "start_time": 0,
-    "description": null
+    "description": "nsfw, loud, gachiGASM"
   },
   "Killaconor": {
     "updated_on": null,
