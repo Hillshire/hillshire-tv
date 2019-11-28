@@ -160,16 +160,6 @@ export default {
     "start_time": 0,
     "description": null
   },
-  "dacamell": {
-    "updated_on": null,
-    "created_on": "2015-12-31 18:20:27.656585",
-    "url": "6db6NhrSh1Y",
-    "type": "youtube",
-    "volume": null,
-    "views": 4170,
-    "start_time": 67,
-    "description": null
-  },
   "DOIT": {
     "updated_on": null,
     "created_on": "2015-06-12 23:11:20.336",
