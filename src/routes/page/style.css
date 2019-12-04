@@ -6,3 +6,14 @@ iframe, img {
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
+
+@keyframes scooter-dan {
+	from { background-position-x: 0; }
+	to { background-position-x: 9999999px; }
+	from { background-position-y: 0; }
+	to { background-position-y: 9999999px; }
+}
+
+section {
+	animation: scooter-dan 10000s infinite;
+}

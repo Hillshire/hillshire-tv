@@ -160,6 +160,12 @@ export default {
     "start_time": 0,
     "description": null
   },
+  "Dan": {
+    "updated_on": null,
+    "created_on": "2019-12-03 20:06:08.931",
+    "type": "dan",
+    "description": "Slumlord, loud"
+  },
   "DOIT": {
     "updated_on": null,
     "created_on": "2015-06-12 23:11:20.336",
@@ -243,8 +249,8 @@ export default {
   "Hillshire": {
     "updated_on": null,
     "created_on": "2016-06-18 20:08:50.164109",
-    "url": "https://my.mixtape.moe/qvlncs.webm",
-    "type": "other",
+    "url": "q6EoRBvdVPQ",
+    "type": "youtube",
     "volume": null,
     "views": 3147,
     "start_time": 0,
@@ -259,16 +265,6 @@ export default {
     "views": 1078,
     "start_time": 0,
     "description": null
-  },
-  "Leafs4Lyfe": {
-    "updated_on": null,
-    "created_on": "2015-05-29 01:11:24.595",
-    "url": "http://loli.dance",
-    "type": "other",
-    "volume": null,
-    "views": 7853,
-    "start_time": null,
-    "description": "nsfw, loud, anime"
   },
   "league": {
     "updated_on": null,

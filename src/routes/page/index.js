@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
-import style from './style';
 import pages from '../home/pages';
+import './style.css';
 
 const reduceAudioVolume = () => {
 	const audio = document.getElementById('audio');
@@ -36,6 +36,22 @@ const renderYoutube = (page) => (
 	/>
 );
 
+const renderDan = () => {
+	// eslint-disable-next-line no-unused-vars
+	const noJapan = true;
+	const styles = {
+		backgroundImage: 'url(https://puu.sh/ELxO6/f2870c4239.png)',
+		backgroundRepeat: 'repeat',
+		height: '100vh',
+		width: '99vw'
+	};
+	return (
+		<section class="dan" style={styles}>
+			<audio id="audio-dan" autoplay loop volume="0.25">
+				<source src="https://puu.sh/ELxNs/734c005acb.mp3" type="audio/mp3" />
+			</audio>
+		</section>);
+};
 
 const renderError = () => (
 	<div class="alert alert-danger" role="alert">
@@ -54,7 +70,8 @@ const renderPage = (page) => {
 		case 'imgur'  : return renderImgur(page);
 		case 'other'  : return renderOther(page);
 		case 'youtube': return renderYoutube(page);
-		case 'default': return renderError();
+		case 'dan': return renderDan();
+		default: return renderError();
 	}
 };
 
@@ -71,6 +88,20 @@ const randomPage = () => {
 };
 
 export default class Page extends Component {
+	clickedToPlayDansStupidPage() {
+		// have to do this because of autoplay permissions on chrome
+		this.setState({ clickedToPlay: true });
+	}
+
+	constructor() {
+		super();
+		this.clickedToPlayDansStupidPage = this.clickedToPlayDansStupidPage.bind(this);
+	}
+
+	state = {
+		clickedToPlay: false
+	};
+
 	componentDidMount() {
 		reduceAudioVolume();
 	}
@@ -78,8 +109,9 @@ export default class Page extends Component {
 		if (title.toLowerCase() === 'random') return randomPage();
 		const pageTitle = Object.keys(pages).find(key => key.toLowerCase() === title.toLowerCase());
 		const page = pages[pageTitle];
-		return (
-			renderPage(page)
-		);
+		if (title.toLowerCase() === 'dan' && !this.state.clickedToPlay) {
+			return <a href="#YEE-WINS" onClick={this.clickedToPlayDansStupidPage} style={{ fontSize: '20px' }}>Click to play</a>;
+		}
+		return renderPage(page);
 	}
 }
